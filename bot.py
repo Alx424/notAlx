@@ -11,7 +11,7 @@ def get_meme():
   json_data = json.loads(response.text)
   return json_data['url']
 def get_boredActivity():
-  reponse = requests.get('https://www.boredapi.com/api/activity')
+  response = requests.get('https://www.boredapi.com/api/activity')
   json_data = json.loads(response.text)
   return json_data['activity']
 
