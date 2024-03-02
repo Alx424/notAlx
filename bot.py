@@ -17,7 +17,7 @@ def get_boredActivity():
 def get_AstronomyPicOfTheDay():
     response = requests.get('https://api.nasa.gov/planetary/apod?api_key=CovdJv0F7rn2uFCfcwEv7WBwqOOg5GZBsvUDxCCz')
     json_data = json.loads(response.text)
-    return json_data['title'] + json_data['hdurl'] + '\n' + json_data['explanation']
+    return '# Astronomical Picture Of the Day\n## ' + json_data['title'] + '\n' + json_data['hdurl'] + '\n' + json_data['explanation'] + ''
 
 class MyClient(discord.Client):
     async def on_ready(self):
