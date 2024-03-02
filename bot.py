@@ -17,8 +17,8 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         if message.author == self.user:
             return
-        if message.content.startswith('$hello'):
-            await message.channel.send('Hello World!')
+        if message.content.startswith('$start'):
+            await message.channel.send('Hello @alsoNotAlx!')
         if message.content.startswith('$meme'):
             await message.channel.send(get_meme())
 intents = discord.Intents.default()
