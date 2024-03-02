@@ -24,7 +24,7 @@ class MyClient(discord.Client):
         if message.content.startswith('$hello'):
             await message.channel.send('Hello there! How can I assist you? Type $commands to see a list of commands.')
         if message.content.startswith('$commands'):
-            await message.channel.send('$hello - greet the bot \n $commands - a list of commands \n $meme - show a random meme')
+            await message.channel.send('$hello - greet the bot \n$commands - a list of commands \n$meme - show a random meme \n$bored - a random activity to do when you\'re bored')
         if message.content.startswith('$meme'):
             await message.channel.send(get_meme())
         if message.content.startswith('$bored'):
