@@ -34,7 +34,7 @@ class MyClient(discord.Client):
         if message.content.startswith('$bored'):
             await message.channel.send(get_boredActivity())
         if message.content.startswith('$apod'):
-            await message.channel.send(get_AstronomyPicOfTheDay)
+            await message.channel.send(get_AstronomyPicOfTheDay())
 intents = discord.Intents.default()
 intents.message_content = True
 
