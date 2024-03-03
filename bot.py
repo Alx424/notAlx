@@ -17,7 +17,11 @@ def get_boredActivity():
 def get_AstronomyPicOfTheDay():
     response = requests.get('https://api.nasa.gov/planetary/apod?api_key=CovdJv0F7rn2uFCfcwEv7WBwqOOg5GZBsvUDxCCz')
     json_data = json.loads(response.text)
-    return '# Astronomical Picture Of the Day\n## ' + json_data['title'] + '\n' + json_data['hdurl'] + '\n' + json_data['explanation'] + ''
+    return '# Astronomical Picture Of the Day\n## ' + json_data['title'] + '\n' + json_data['url'] + '\n' + json_data['explanation'] + ''
+def get_insult():
+    response = requests.get('https://evilinsult.com/generate_insult.php?lang=en&type=json')
+    json_data = json.loads(response.text)
+    return json_data['insult']
 
 class MyClient(discord.Client):
     async def on_ready(self):
